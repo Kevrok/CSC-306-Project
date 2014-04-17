@@ -1,18 +1,15 @@
 // James Maher
 // CSC-306 Project 1
 // File: main.cpp
-// Last modified on 4-15-14
+// Last modified on 4-17-14
 
 #include <iostream>
 #include <string>
 
-#include "..\..\Lab1\Lab1\CScreen.h"
+#include "CScreen.h"
+#include "Item.h"
 
 using namespace std;
-
-struct Node {
-
-};
 
 class List {
 	Node *head, *tail, *ptr;
@@ -32,13 +29,6 @@ public:
 
 struct Inventory {
 
-};
-
-struct Item {
-	char* UPC;
-	int QoH;
-	float price;
-	string description;
 };
 
 class CashReg {
@@ -83,7 +73,7 @@ int main(void) {
 		cout << "\nPlease enter a command: ";
 		cin >> command;
 
-		if (command[1] != '\0' && command[0] == 'N') { // start new tape
+		if (command[0] == 'N') { // start new tape
 			while (moreItems) { // loop until T is entered
 				cout << "\nPlease enter a command or UPC: ";
 				cin >> command;
