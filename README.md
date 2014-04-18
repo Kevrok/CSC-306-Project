@@ -4,7 +4,7 @@ Object              | Method
 <br>
 printer             | print
 <br>
-                    | - UPC, name, quantity
+<sp>                | - UPC, name, quantity
 <br>
 scanner             | scan UPC
 <br>
