@@ -10,17 +10,17 @@ scanner             | scan UPC
 <br>
 screen              | display
 <br>
-                    | - UPC, name, quantity, menu
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| - UPC, name, quantity, menu
 <br>
 drawer              | open, close
 <br>
 keyboard            | input
 <br>
-                    | - command, UPC
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| - command, UPC
 <br>
 receipt (i.e. tape) | display
 <br>
-                    | - UPC, name, quantity
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| - UPC, name, quantity
 <br>
 power switch        | toggle on/off
 <br>
