@@ -3,7 +3,9 @@ CSC-306-Project
 Object              | Method
 <br>
 -------------------------------------------------
+<br>
 printer             | print
+<br>
                     | - UPC, name, quantity
 scanner             | scan UPC
 screen              | display
