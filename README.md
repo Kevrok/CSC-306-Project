@@ -1,6 +1,7 @@
 CSC-306-Project
 ===============
 Object              | Method
+<br>
 -------------------------------------------------
 printer             | print
                     | - UPC, name, quantity
