@@ -25,7 +25,7 @@ CScreen::CScreen(int iSizeX, int iSizeY)  // init a DOS window
 		            | FILE_SHARE_WRITE, 0L,OPEN_EXISTING,FILE_ATTRIBUTE_NORMAL,0L); */
 
     SetConsoleScreenBufferSize(hConsole, consoleSize);
-    
+
     GetConsoleScreenBufferInfo(hConsole, &conInfo);
     curInfo.bVisible = bCursor;  // Hide the cursor.
     SetConsoleCursorInfo(hConsole, &curInfo);
@@ -34,7 +34,6 @@ CScreen::CScreen(int iSizeX, int iSizeY)  // init a DOS window
 CScreen::~CScreen()
 {  CloseHandle(hConsole);
 }
-
 
 //*****************************************************************************
 void CScreen::ClearScreen()    // erase the screen to background color

@@ -4,7 +4,6 @@
 
 // This program provides interface control for console applications. I provides: screen addressing, custom I/O, screen delay, clear screen, colored text and backgroungs, etc. 
 
-
 #ifndef _Screenio
 #define _Screenio
 
@@ -13,14 +12,13 @@
 enum {BLACK, DBLUE, GREEN, MBLUE, DRED, PURPLE, OLIVE, LTBLUE, GRAY,
       BLUE, LTGREEN, AQUA, RED, FUSCIA, GOLD, WHITE};
 
-
 class CScreen
 { // create a DOD window and provide user support for screen I/O
   private:
     HANDLE hConsole;                       // ID of DOS window
     CONSOLE_SCREEN_BUFFER_INFO conInfo;    // hold state info
     CONSOLE_CURSOR_INFO curInfo;           // holds cursor data
-	
+
 	// state info
 	int iForColor, iBakColor;              // foreground/background
 	bool bCursor;                          // true = show cursor
@@ -48,5 +46,3 @@ class CScreen
 	float CScreen::GetVal(int iX, int iY);
 	void Box(int iULx, int iULy, int iLRx, int iLRy, int iBkColor);
 };
-
-#endif

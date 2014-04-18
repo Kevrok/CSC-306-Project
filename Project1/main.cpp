@@ -11,24 +11,40 @@
 
 using namespace std;
 
+class Node {
+};
+
 class List {
 	Node *head, *tail, *ptr;
 public:
-	List() { head = tail = ptr = NULL; }
+	List() { head = tail = ptr = NULL; } // simple constructor
+	List() {const List &obj) // copy constructor
+	~List() {}
 	bool isEmpty() { return !head; }
 	bool isFull() {}
-	void addItem() {}
+	void addItem(char* UPC) {}
 	void removeItem() {}
 };
 
+void List::addItem(char* UPC) {
+	if (&head == NULL) // if list is currently empty
+		head = tail = ptr;
+	else if (&head != NULL && tail == head) // if there's only one thing in the list
+		// make tail the new item, and have head point to tail
+	else // if (&head != NULL && &tail != NULL) // the list is >= 2 nodes in size
+		// make a new node between head and tail, have head point to new node, and have new node point to tail (assuming there are no other in-between nodes) 
+		
+}
+
 class Tape {
 public:
-	Tape (CScreen&) {}
+	Tape (CScreen&) {} // simple constructor
+	Tape () {const Tape &obj} // copy constructor
+	~Tape () {}
 	void display(int x, int y, int nbrItems) {} // x,y is upper left corner of display area, and nbrItems is # of items to display at once
 };
 
 struct Inventory {
-
 };
 
 class CashReg {
@@ -39,19 +55,35 @@ class CashReg {
 	Inventory inventory;
 	Item item;
 public:
-	CashReg (float, float, string, Tape, Inventory, Item);
-	void EnterUPC (char* UPC) {}
-	void ShutDown () {}
+	CashReg (float, float, string, Tape, Inventory, Item); // simple constructor
+	CashReg (const CashReg &obj); // copy constructor
+	~CashReg(); // destructor
+	void TurnOn () {}
+	void TurnOff () {}
 	void CloseOrder () {}
 };
-
-void CashReg::EnterUPC (char* UPC) {
-}
 
 void CashReg::ShutDown () { // Verify that there is not currently an open order, and then shut down
 }
 
 void CashReg::CloseOrder() { // calculate total purchase amt, amt received, and change
+}
+
+class keyboard {
+public:
+	void enterCommand() {}
+	char* UPC enterUPC() {}
+};
+
+char keyboard::enterCommand() {} {
+	// send command to cash register CPU
+}
+
+char* UPC keyboard::enterUPC() {
+	char* UPC;
+
+	return UPC;
+	// send UPC to cash register CPU
 }
 
 int main(void) {
@@ -78,7 +110,7 @@ int main(void) {
 				cout << "\nPlease enter a command or UPC: ";
 				cin >> command;
 
-				if (command[1] != '\0') { // it's a UPC
+				if (command[1] != NULL) { // it's a UPC
 					// look up item in inventory
 					// add item to purchase list
 				}

@@ -84,6 +84,9 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="Q.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\CSC_306_Project_1_Cash_Register.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
