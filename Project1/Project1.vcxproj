@@ -76,18 +76,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CashReg.cpp" />
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CScreen.cpp" />
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Menu.cpp" />
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Tape.cpp" />
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\TapeDriver.cpp" />
+    <ClCompile Include="CashReg.cpp" />
+    <ClCompile Include="CScreen.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Tape.cpp" />
+    <ClCompile Include="TapeDriver.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CashReg.h" />
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CScreen.h" />
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Inven.h" />
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Item.h" />
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Tape.h" />
+    <ClInclude Include="CashReg.h" />
+    <ClInclude Include="CScreen.h" />
+    <ClInclude Include="Inven.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Tape.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\CSC_306_Project_1_Cash_Register.png" />

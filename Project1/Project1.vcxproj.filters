@@ -15,36 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CashReg.cpp">
+    <ClCompile Include="CashReg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CScreen.cpp">
+    <ClCompile Include="CScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Menu.cpp">
+    <ClCompile Include="Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Tape.cpp">
+    <ClCompile Include="Tape.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\TapeDriver.cpp">
+    <ClCompile Include="TapeDriver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CashReg.h">
+    <ClInclude Include="Tape.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CScreen.h">
+    <ClInclude Include="Item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Inven.h">
+    <ClInclude Include="Inven.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Tape.h">
+    <ClInclude Include="CScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Item.h">
+    <ClInclude Include="CashReg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
