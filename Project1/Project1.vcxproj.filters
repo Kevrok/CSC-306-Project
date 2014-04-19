@@ -15,21 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CashReg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CScreen.cpp">
+    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Tape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\TapeDriver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CScreen.h">
+    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CashReg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
+    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\CScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Q.h">
+    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Inven.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Tape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Documents\Visual Studio 2013\Projects\CashReg\CashReg\Item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
