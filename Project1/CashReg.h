@@ -5,6 +5,7 @@
 using namespace std;
 
 #include "Tape.h"
+#include "Item.h"
 #include "Inven.h"
 
 class CashReg {
@@ -12,7 +13,7 @@ class CashReg {
 		  regTotal; // cash in register
 	string input; // value for a prompt
 	Tape tape; // holds the order's items
-	//Inven inventory;
+	Inven inventory;
 	Item item;
 public:
 	//CashReg(float, float, string, Tape, Inven, Item); // constructor - create an empty cash register

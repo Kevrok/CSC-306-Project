@@ -23,6 +23,11 @@ Tape::~Tape()   // destructor
 	}
 }
 
+bool Tape::addItem(Item * item) // add item to head of list
+{
+	
+}
+
 bool Tape::addItem(string upc, string description, float price) // add item to the tail of the list
 {
 	bool rtn = true;  // really should predicate return value on the allocation working
@@ -32,7 +37,6 @@ bool Tape::addItem(string upc, string description, float price) // add item to t
 	itemCount++;
 
 	// hook node on head of list
-
 
 	if (!nHead)    // empty list
 		nHead = nTail = nPtr;
@@ -45,7 +49,7 @@ bool Tape::addItem(string upc, string description, float price) // add item to t
 	return rtn;
 }
 
-bool Tape::voidItem(string upc)  // remove item # nbr from the list
+bool Tape::voidItem(string upc)  // remove item # from the list
 {
 	bool rtn = true;
 	// find item in list
@@ -59,10 +63,10 @@ void Tape::displayItems()  // display the displaySize newest items
 	int  count = 0;
 	nPtr = nHead;
 
-	while (nPtr && count++ < displaySize)
-	{
-		S.GotoXY(posX + 1, posY + count);
-		cout << nPtr->itemPtr->UPC << " " << nPtr->itemPtr->desc << endl;  // use drawString
+	while (nPtr && count++ < displaySize) // while you're pointing to something and you haven't printed enough items on the screen
+	{ // go ahead and print the next one
+		S.DrawString(nPtr->itemPtr->getUPC(), posX + 1, posY + count, OLIVE, WHITE);
+		S.DrawString(nPtr->itemPtr->getDesc(), posX + 15, posY + count, OLIVE, WHITE);
 		nPtr = nPtr->nextPtr;
 	}
 }
@@ -72,7 +76,7 @@ Tape::Node * Tape::find(string upc)  // Private method: find node UPC in list an
 	nPtr = nHead;
 	while (nPtr)                   // look at each Item until found
 	{
-		if (nPtr->itemPtr->UPC.compare(upc) == 0)   // if strings are equal
+		if (nPtr->itemPtr->getUPC().compare(upc) == 0)   // if strings are equal
 			return nPtr;           // found the node, return a pointer to it in list
 		else
 			nPtr = nPtr->nextPtr;  // move to next Item

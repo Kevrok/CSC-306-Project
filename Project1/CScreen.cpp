@@ -44,17 +44,17 @@ void CScreen::ClearScreen()    // erase the screen to background color
 }
 
 //*****************************************************************************
-void CScreen::DrawString(char *szStr, int iX, int iY, int iBClr, int iFClr)
+void CScreen::DrawString(string str, int iX, int iY, int iBClr, int iFClr)
 {                                     // print text at (x,y)
 	if (iX != -1 && iY != -1)
 		GotoXY(iX, iY);
 	if (iBClr == -1 && iFClr == -1)
-		printf("%s", szStr);
+		printf("%s", str);
 	else
 	{
 		int iFgColor = iForColor, iBkColor = iBakColor;
 		SetColor(iBClr, iFClr);
-		printf("%s", szStr);
+		printf("%s", str);
 		SetColor(iFgColor, iBkColor);
 	}
 

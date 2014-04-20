@@ -10,8 +10,8 @@ void main() // using main() to test the tape object
 	Tape tape(10, 10, 5); // create a tape
 
 	tape.addItem("0000", "clown doll", 0.99f);
-	tape.addItem("1111", "woopy cushion", 1.99f);
-	tape.addItem("2222", "barby doll", 2.99f);
+	tape.addItem("1111", "whoopee cushion", 1.99f);
+	tape.addItem("2222", "Barbie doll", 2.99f);
 	tape.addItem("3333", "straight As", 3.99f);
 	tape.addItem("4444", "dog food", 4.99f);
 	tape.addItem("5555", "old tires", 5.99f);

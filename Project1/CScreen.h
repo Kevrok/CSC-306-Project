@@ -7,6 +7,9 @@
 #ifndef _Screenio
 #define _Screenio
 
+#include <string>
+using namespace std;
+
 #include <Windows.h>
 
 enum {
@@ -38,7 +41,7 @@ public:
 	void SetBkColor(int iBColor);          // set background color
 	void ClearScreen();                    // erase the screen
 	void ClearScreenPos(int x, int y);     // erase single char
-	void DrawString(char *szStr, int iX = -1, int iY = -1, int BClr = -1, int FClr = -1); // write @ (x,y) 
+	void DrawString(string str, int iX = -1, int iY = -1, int BClr = -1, int FClr = -1); // write @ (x,y) 
 	void DrawString(int iX, int iY, char *szStr, int BClr = -1, int FClr = -1);
 	void DrawString(double d, int iX = -1, int iY = -1);
 	void Delay(int ix = 0, int iy = 24, char szPrompt[] = "Press <CR> to continue");                          // wait fo <CR>

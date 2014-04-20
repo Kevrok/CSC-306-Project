@@ -6,18 +6,9 @@
 using namespace std;
 
 #include "CScreen.h"
-#include "CashReg.h"
+#include "Menu.h"
 
-int main(void) {
-	bool moreCustomers,
-		 moreItems;
-	string command;
-	float initialCash;
-	CScreen s;
-
-	cout << "Please enter the amount of cash in the register: ";
-	cin >> initialCash;
-
+void Menu::displayChoices() {
 	while (moreCustomers) { // loop until E is entered
 		cout << "\nPlease enter a command: ";
 		cin >> command;
@@ -46,6 +37,17 @@ int main(void) {
 			moreCustomers = false;
 		}
 	}
+}
+
+int main(void) {
+	bool moreCustomers,
+		 moreItems;
+	string command;
+	float initialCash;
+	CScreen s;
+
+	cout << "Please enter the amount of cash in the register: ";
+	cin >> initialCash;
 
 	return 0;
 }
