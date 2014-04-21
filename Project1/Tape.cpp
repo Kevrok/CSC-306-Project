@@ -16,34 +16,57 @@ Tape::Tape(int x, int y, int size)   // constructor - create an empty list
 
 Tape::~Tape()   // destructor
 {
-	nHead = nPtr;
+	nPtr = nHead;
 
 	while (nPtr) {
 		// traverse through the list, and have each member destroy itself
+		Node *nextPtr = nPtr->nextPtr;
+		delete nPtr;
+		nPtr = nextPtr;
 	}
 }
 
 bool Tape::addItem(Item * item) // add item to head of list
 {
-	
+	bool rtn = false; // predicates return value on the allocation working
+
+	if (nPtr = new Node()) { // create a node
+		rtn = true;
+		nPtr->itemPtr = item;
+		itemCount++;
+
+		// hook node on head of list
+
+		if (!nHead) // empty list
+			nHead = nTail = nPtr;
+		else
+		{
+			nPtr->nextPtr = nHead;
+			nHead = nPtr;
+		}
+	}
+
+	return rtn;
 }
 
-bool Tape::addItem(string upc, string description, float price) // add item to the tail of the list
+bool Tape::addItem(string upc, string description, float price) // add item to the head of the list
 {
-	bool rtn = true;  // really should predicate return value on the allocation working
+	bool rtn = false;  // predicates return value on the allocation working
 
-	nPtr = new Node();                                      // create a node
-	nPtr->itemPtr = new Item(upc, description, price, 1);   // create & link a dynamic Item
-	itemCount++;
+	if (nPtr = new Node()) { // create a node
+		rtn = true;
+		nPtr->itemPtr = new Item(upc, description, price, 1);   // create & link a dynamic Item
+		itemCount++;
 
-	// hook node on head of list
+		// hook node on head of list
 
-	if (!nHead)    // empty list
-		nHead = nTail = nPtr;
-	else
-	{
-		nPtr->nextPtr = nHead;
-		nHead = nPtr;
+		if (!nHead)    // empty list
+			nHead = nTail = nPtr;
+		else
+		{
+			nPtr->nextPtr = nHead;
+			nHead = nPtr;
+		}
 	}
 
 	return rtn;
@@ -51,9 +74,21 @@ bool Tape::addItem(string upc, string description, float price) // add item to t
 
 bool Tape::voidItem(string upc)  // remove item # from the list
 {
-	bool rtn = true;
-	// find item in list
-	// remove item
+	bool rtn = false;
+
+	if (nPtr = find(upc)) { // if item can be found
+		rtn = true;
+
+		// have previous item point to next item
+		nPtr->prevPtr = ;
+
+		// have next item point to prev item
+		nPtr->nextPtr = nPtr;
+
+		// remove item
+		delete nPtr;
+	}
+
 	return rtn;
 }
 

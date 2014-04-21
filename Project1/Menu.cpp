@@ -2,52 +2,50 @@
 // Written by James Maher and Kurt
 
 #include <iostream>
-#include <string>
 using namespace std;
 
-#include "CScreen.h"
 #include "Menu.h"
 
 void Menu::displayChoices() {
-	while (moreCustomers) { // loop until E is entered
-		cout << "\nPlease enter a command: ";
-		cin >> command;
+	moreCust = true;
 
-		if (command[0] == 'N') { // start new tape
-			while (moreItems) { // loop until T is entered
+	while (moreCust) { // loop until E is entered
+		cout << "M -- Multiple\nV -- Void\nT -- Total\nN -- New tape\nE -- Close register\nPlease enter a command: ";
+		cin >> input;
+
+		if (input.compare("N") == 0) { // start new tape
+			moreItem = true;
+
+			while (moreItem) { // loop until T is entered
 				cout << "\nPlease enter a command or UPC: ";
-				cin >> command;
+				cin >> input;
 
-				if (command[1] != NULL) { // it's a UPC
+				if (input.compare(NULL) != 0) { // it's a UPC
 					// look up item in inventory
+					desc = inven.lookUpDesc(input);
+					price = inven.lookUpPrice(input);
+
 					// add item to purchase list
+					tape.addItem(input, desc, price);
 				}
-				else if (command[0] == 'M')
+				else if (input.compare("M") == 0) {
 					// handle multiples
-				else if (command[0] == 'V')
-				// handle void
-				else if (command[0] == 'T') {
-					// total order
-					moreItems = false;
 				}
+				else if (input.compare("V") == 0)
+					tape.voidItem(input);
+				else if (input.compare("T") == 0) {
+					// total order
+					moreItem = false;
+				}
+				else
+					cout << "Please enter a valid command or UPC.\n";
 			}
 		}
-		else if (command[0] == 'E') {
+		else if (input.compare("E") == 0) {
 			// close register
-			moreCustomers = false;
+			moreCust = false;
 		}
+		else
+			cout << "Please enter a valid command.\n";
 	}
-}
-
-int main(void) {
-	bool moreCustomers,
-		 moreItems;
-	string command;
-	float initialCash;
-	CScreen s;
-
-	cout << "Please enter the amount of cash in the register: ";
-	cin >> initialCash;
-
-	return 0;
 }

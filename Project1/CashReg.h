@@ -15,6 +15,7 @@ class CashReg {
 	Tape tape; // holds the order's items
 	Inven inventory;
 	Item item;
+	float initAmt;
 public:
 	//CashReg(float, float, string, Tape, Inven, Item); // constructor - create an empty cash register
 	CashReg(const CashReg &obj); // copy constructor

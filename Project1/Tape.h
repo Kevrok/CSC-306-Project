@@ -9,17 +9,14 @@ using namespace std;
 
 class Tape
 {
-	class Node // local class - data element for linked list
-	{               // Node is used in a doubly linked list (forward & backward)
+	class Node { // local class - data element for linked list
 	public:
+		// Node is used in a doubly linked list (forward & backward)
 		Item * itemPtr; // pointer to an Item
 		Node * nextPtr; // pointer to the next Node
 		Node * prevPtr; // pointer to previous Node
 
-		Node() // Constructor: create unconnecting node
-		{
-			itemPtr = NULL; nextPtr = prevPtr = NULL;
-		}
+		Node(){ itemPtr = NULL; nextPtr = prevPtr = NULL; } // Constructor: create unconnecting node
 	};
 
 	Node * nHead, *nTail, *nPtr; // linked list pointers
